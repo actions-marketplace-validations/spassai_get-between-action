@@ -19,6 +19,10 @@
 
 **Required** The ending substring to search for
 
+### `defaultString`
+
+**Optional** Default string to return if the desired string is not found
+
 ## Outputs
 
 ### `substring`

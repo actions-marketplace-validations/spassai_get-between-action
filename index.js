@@ -9,23 +9,19 @@ try {
   const string = core.getInput("string");
   const start = core.getInput("start");
   const end = core.getInput("end");
-
-  console.log(`string: ${string}, start: ${start}, end: ${end}`);
+  const defaultString = core.getInput("defaultString");
 
   const regexp = new RegExp(
-    `${start.encodeRegExp()}.*${end.encodeRegExp()}`,
-    "gi"
+      `${start.encodeRegExp()}.*${end.encodeRegExp()}`,
+      "gi"
   );
 
-  console.log(regexp);
-
   let result = string.match(regexp);
-  console.log(`step1: ${result}`);
-  result += "";
-  console.log(`step2: ${result}`);
-  result = result.replace(start, "").replace(end, "");
-
-  console.log(`substring: ${result}`);
+  if (result) {
+    result += "";
+    result = result.replace(start, "").replace(end, "");
+  }
+  else result = defaultString;
 
   core.setOutput("substring", result);
 } catch (error) {

@@ -6,8 +6,14 @@ inputs:
     required: true
   start:
     description: "The starting substring to search for"
+    required: true
   end:
     description: "The ending substring to search for"
+    required: true
+  defaultString:
+    description: "Default string to return if the desired string is not found"
+    required: false
+
 outputs:
   substring: # id of output
     description: "The substring between the start and end substrings (excluding the start and end substrings themselves)"
