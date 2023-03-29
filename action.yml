@@ -1,0 +1,19 @@
+name: "Get find and substring between two strings"
+description: "This action finds the substrings that start and end in the given string, and returns the substring between them."
+inputs:
+  string:
+    description: "The input string"
+    required: true
+  start:
+    description: "The starting substring to search for"
+  end:
+    description: "The ending substring to search for"
+outputs:
+  substring: # id of output
+    description: "The substring between the start and end substrings (excluding the start and end substrings themselves)"
+runs:
+  using: "node16"
+  main: "index.js"
+branding:
+  icon: "search"
+  color: gray-dark
