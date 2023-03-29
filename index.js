@@ -20,9 +20,6 @@ try {
   result = result.replace(start, "").replace(end, "");
 
   core.setOutput("substring", result);
-
-  const payload = JSON.stringify(github.context.payload, undefined, 2);
-  console.log(`The event payload: ${payload}`);
 } catch (error) {
   core.setFailed(error.message);
 }
