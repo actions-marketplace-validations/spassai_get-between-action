@@ -20,7 +20,9 @@ try {
   console.log(regexp);
 
   let result = string.match(regexp);
+  console.log(`step1: ${result}`);
   result += "";
+  console.log(`step2: ${result}`);
   result = result.replace(start, "").replace(end, "");
 
   console.log(`substring: ${result}`);
